@@ -1,0 +1,14 @@
+body {
+    scroll-behavior: smooth;
+  }
+
+  button.correct {
+    background-color: #22c55e !important; 
+    color: white;
+  }
+  
+  button.incorrect {
+    background-color: #ef4444 !important;
+    color: white;
+  }
+  

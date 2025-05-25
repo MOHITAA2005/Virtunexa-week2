@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white text-gray-800 min-h-screen font-sans">
+  
+  <nav class="bg-blue-600 text-white p-4 fixed w-full top-0 shadow z-50">
+    <div class="flex justify-between items-center max-w-6xl mx-auto">
+      <h1 class="text-2xl font-bold">Quizizz</h1>
+      <div class="space-x-4 text-sm md:text-base">
+        <a href="#config" class="hover:underline">Start</a>
+        <a href="#quiz" class="hover:underline">Quiz</a>
+      </div>
+    </div>
+  </nav>
+
+  
+  <main class="pt-28 max-w-3xl mx-auto px-4">
+
+    <section id="config" class="bg-white p-6 rounded-lg shadow-lg mb-12">
+      <h2 class="text-2xl font-bold mb-4"> Choose Your Category</h2>
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <select id="categorySelect" class="p-2 border rounded w-full md:w-auto">
+          <option value="general">General Knowledge</option>
+          <option value="science">Science</option>
+          <option value="history">History</option>
+        </select>
+        <button id="startBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded shadow transition">Start Quiz</button>
+      </div>
+    </section>
+
+    <section id="quiz" class="hidden bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex justify-between mb-4 text-lg font-semibold text-blue-700">
+        <span id="timer">⏳ Time: 30</span>
+        <span id="score">🏆 Score: 0</span>
+      </div>
+      <div id="questionContainer" class="mb-6">
+        <p id="questionText" class="text-xl font-medium mb-4"></p>
+        <div id="answerButtons" class="grid gap-3"></div>
+      </div>
+      <button id="nextBtn" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded shadow hidden transition">Next</button>
+    </section>
+  </main>
+
+  <footer class="text-center mt-16 text-gray-500 text-sm">
+    &copy; 2025 QuizMaster. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
